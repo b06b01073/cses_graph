@@ -1,4 +1,8 @@
-# Flight discount
+# Writeup
+
+Solutions to some of the hard problems.
+
+## Flight discount
 
 Use Dijstra to solve two single source shortest path problems, one start from node `1` the other start from node `n`. Let's say `src[i]` is the shortest path from `1` to node `i` and `dst[i]` is the shortest path from `n` to node `i`.
 
