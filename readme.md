@@ -22,3 +22,18 @@ Here, we only show that the condition is sufficient. The neccessity of the condi
 
 #### Note: How to find whether every other nodes can reach node $1$?
 reverse the graph and run dfs start from node $1$.
+
+
+## [Cycle Finding](https://cses.fi/problemset/task/1197/)
+
+Read the [post](https://cp-algorithms.com/graph/finding-negative-cycle-in-graph.html).
+
+In the problem, the graph may contains multiple components. We can solve this problem by
+
+1. Run Bellman-Ford algorithm on each components.
+1. Add a pseudo node $0$ that connects to all the existing node with weight $0$. Adding a pseudo node does not make the negative cycle disappear or appear. However, adding this node makes things much more easier, we can simpoly run Bellman-Ford algorithm by treating $0$ as our starting point.
+
+and we use approach 2 in this problem by setting the distance from node $0$ to other nodes to $0$ at line 25.
+
+In the last iteration of Bellman-Ford algorithm (iteration $n$), we record **a** node that is in the negative cycle. Now, we simply visit the parents iteratively to find the cycle.
+
