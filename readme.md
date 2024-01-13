@@ -37,3 +37,7 @@ and we use approach 2 in this problem by setting the distance from node $0$ to o
 
 In the last iteration of Bellman-Ford algorithm (iteration $n$), we record **a** node that is in the negative cycle. Now, we simply visit the parents iteratively to find the cycle.
 
+
+## [Coin Collector](https://cses.fi/problemset/task/1686)
+
+SCC + DP. It turns out that after SCC, there's no need to perform topological sort before dynamic programming, since the sequence of the SCCs are in topo sequence already.
